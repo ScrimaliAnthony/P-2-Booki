@@ -1,0 +1,1048 @@
+/*Supprime la bordure de la page*/
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Modifit la police*/
+@font-face {
+    font-family: 'Raleway';
+    src: url(Raleway-Regular.ttf);
+}
+
+/*centre la page du site*/
+body{
+    font-family: 'Raleway';
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Permet aux images de rester nettes en se centrer*/
+img{
+    object-fit: cover;
+}
+
+/*début du header*/
+/*Première barre de navigation*/
+#navigationRapide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1405px;
+    height: 90px;
+}
+
+#logo{
+    width: 95px;
+}
+
+#lien{
+    width: 270px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lienHebergement{
+    text-decoration: none;
+    color: #0065FC;
+    font-weight: bold;
+    border-top: 3px #0065FC solid;
+    padding-top: 32px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#lienAct{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/*Texte entre les deux nav*/
+#premierTitre{
+    margin-top: 20px;
+    width: 1405px;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#phrase{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1405px;
+}
+
+/*Deuxième barre de navigation*/
+#formulair{
+    display: flex;
+    width: 1405px;
+}
+
+#iconeMaps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #F2F2F2;
+    border-radius: 17px 0px 0px 17px;
+}
+
+#searchB{
+    width: 230px;
+    height: 50px;
+    font-weight: bold;
+    border: 1px solid #F2F2F2;
+}
+
+#searchB::placeholder{
+    color: black;
+    font-size: 1.3em;
+}
+
+.search{
+    background-color: #0065FC;
+    border: none;
+    width: 130px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.mobile {
+    display: none;
+}
+
+/*troisième barre de navigation*/
+/*Ensemble de la navigation*/
+#navBoutons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    width: 900px;
+    height: 47px;
+}
+
+#filtre{
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 50px;
+}
+
+#boutonFiltre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    height: 47px;
+}
+
+.decoB{
+    text-decoration: none;
+}
+/*Les filtres sont mis à la suite, id finit par L si Logo et par B si Bouton*/
+/*Rassemble le logo et le filtre Economique*/
+#ecoFami{
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+}
+
+#eco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px #D9D9D9 solid;
+    border-left: none;
+    border-radius: 50px;
+    height: 47px;
+    color: black;
+}
+
+#ecoL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #0065FC;
+}
+
+#ecoB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 115px;
+    height: 44px;
+}
+
+#eco:hover{
+    background-color: #DEEBFF;
+}
+
+#eco:hover #ecoL{
+    background-color: white;
+    border:2px #D9D9D9 solid;
+}
+/*Rassemble le logo et le filtre Familial*/
+#fami{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px #D9D9D9 solid;
+    border-left: none;
+    border-radius: 50px;
+    height: 47px;
+    color: black;
+}
+
+#famiL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #0065FC;
+}
+
+#famiB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 70px;
+    height: 44px;
+}
+
+#fami:hover{
+    background-color: #DEEBFF;
+}
+
+#fami:hover #famiL{
+    background-color: white;
+    border:2px #D9D9D9 solid;
+}
+/*Rassemble le logo et le filtre Romantique*/
+#romanti{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px #D9D9D9 solid;
+    border-left: none;
+    border-radius: 50px;
+    height: 47px;
+    color: black;
+}
+
+#romantiL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #0065FC;
+}
+
+#romantiB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 105px;
+    height: 44px;
+}
+
+#romanti:hover{
+    background-color: #DEEBFF;
+}
+
+#romanti:hover #romantiL{
+    background-color: white;
+    border:2px #D9D9D9 solid;
+}
+/*Rassemble le logo et le filtre Animaux autorisés*/
+#anim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px #D9D9D9 solid;
+    border-left: none;
+    border-radius: 50px;
+    height: 47px;
+    color: black;
+}
+
+#animL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEEBFF;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: #0065FC;
+}
+
+#animB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 150px;
+    height: 44px;
+}
+
+#anim:hover{
+    background-color: #DEEBFF;
+}
+
+#anim:hover #animL{
+    background-color: white;
+    border:2px #D9D9D9 solid;
+}
+/*barre d'info*/
+#info{
+    display: flex;
+    align-items: center;
+    width: 1405px;
+    margin-top: 37px;
+}
+
+#infoL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    border: 1px #D9D9D9 solid;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/*Fin du Header*/
+/*Début du main*/
+
+/*Commun au main*/
+.etoile{
+    display: flex;
+    font-size: 0.7em;
+    color: #0065FC;
+}
+
+.etoileG{
+    color: #D9D9D9 !important;
+}
+
+.textDecorationNone{
+    text-decoration: none;
+    color: black;
+}
+
+/*Rassemble Section Hébergement et Aside Les Plus populaires*/
+#principal{
+    display: flex;
+    justify-content: space-between;
+    width: 1405px;
+}
+
+/*Section Hébergement*/
+#hebergement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+    margin-top: 37px;
+    margin-bottom: 20px;
+    border-radius: 17px 17px 17px 17px;
+    width: 880px;
+    height: 625px;
+}
+
+.titreSection{
+    height: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+#tousHebergement{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 450px;
+}
+
+.conteneurHebergement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 191px;
+    background-color: #ffffff;
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+.imgHebergement{
+    width: 230px;
+    height: 115px;
+    border-radius: 13px 13px 0px 0px;
+}
+
+.infoHebergement{
+    width: 215px;
+}
+
+.nomHebergement{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 0.8em;
+}
+
+.prixHebergement{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 0.8em;
+}
+
+#afficherPlus{
+    margin-left: 30px;
+}
+
+
+/*Fin Section Hébergements*/
+/*Début Aside Les Plus Populaires*/
+
+#populaire{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+    margin-top: 37px;
+    width: 420px;
+    height: 625px;
+    border-radius: 17px 17px 17px 17px;
+}
+
+#titrePop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 80px;
+}
+
+#titrePopu{
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.conteneurPopulaire{
+    display: flex;
+    width: 340px;
+    height: 143px;
+    margin-bottom: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+.imgPopulaire{
+    width: 130px;
+    height: 132px;
+    border-radius: 13px 0px 0px 13px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.infoPopulaire{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+}
+
+.nomPopulaire{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    width: 130px;
+    height: 40px;
+    margin-top: 12px;
+}
+
+.prixPopulaire{
+    display: flex;
+    align-items: center;
+    height: 25px;
+    font-size: 0.8em;
+    margin-bottom: 40px;
+}
+
+/*Fin aside Les Plus populaires*/
+/*Début Section Activités à Marseille*/
+
+/*Commun à toutes les activités*/
+#activite{
+    display: flex;
+    flex-direction: column;
+    width: 1405px;
+}
+
+.nomActivite{
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 50px;
+}
+
+#tousActivite{
+    display: flex;
+    justify-content: space-between;
+}
+
+#titreActivite{
+    font-size: 1.4em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/*activitéXL*/
+.conteneurActiviteXL{
+    display: flex;
+    flex-direction: column;
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+.imgActiviteXL{
+    width: 300px;
+    height: 380px;
+    border-radius: 17px 17px 0px 0px;
+}
+
+/*colonne L et XS*/
+
+#conteneurActiviteL{
+    border-radius: 17px 17px 17px 17px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+#imgActiviteL{
+    width: 300px;
+    height: 180px;
+    border-radius: 17px 17px 0px 0px;
+}
+
+#conteneurActiviteXS{
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+#imgActiviteXS{
+    width: 300px;
+    height: 106px;
+    border-radius: 17px 17px 0px 0px;
+}
+
+/*colonne S et M*/
+
+#conteneurActiviteS{
+    border-radius: 17px 17px 17px 17px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+#imgActiviteS{
+    width: 300px;
+    height: 130px;
+    border-radius: 17px 17px 0px 0px;
+}
+
+#conteneurActiviteM{
+    border-radius: 17px 17px 17px 17px;
+    box-shadow: 1px 1px 5px #ebebeb;
+}
+
+#imgActiviteM{
+    width: 300px;
+    height: 155px;
+    border-radius: 17px 17px 0px 0px;
+}
+
+/*Fin Section Activités à Marseille*/
+/*Fin Main*/
+/*Début Footer*/
+
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    height: 220px;
+    width: 1500px;
+}
+
+#aPropos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 125px;
+    margin-top: 30px;
+    margin-left: 47px;
+    font-size: 1em;
+}
+
+#aProposT{
+    margin-bottom: 10px;
+}
+
+#nosHebergement{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90px;
+    margin-top: 30px;
+    font-size: 1em;
+    margin-right: 50px;
+}
+
+#nosHebergementT{
+    margin-bottom: 10px;
+}
+
+#assistance{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80px;
+    margin-right: 350px;
+    margin-top: 30px;
+    font-size: 1em;
+}
+
+#assistanceT{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+/*Première barre de navigation*/
+    #navigationRapide{
+        width: 900px;
+    }
+/*Texte entre les deux nav*/
+    #premierTitre{
+        width: 900px;
+    }
+    #phrase{
+        width: 900px;
+    }
+/*Deuxième barre de navigation*/
+    #formulair{
+        width: 900px;
+    }
+/*troisième barre de navigation*/
+    #navBoutons{
+        width: 850px;
+        height: 47px;
+    }
+    #boutonFiltre{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 750px;
+        height: 47px;
+    }
+    #ecoFami{
+        width: 322px;
+    }
+/*barre d'info*/
+    #info{
+        width: 900px;
+    }
+/*Rassemble Section Hébergement et Aside Les Plus populaires*/
+    #principal{
+        flex-direction: column-reverse;
+        width: 900px;
+    }
+/*Section Hébergement*/
+    #hebergement{
+        width: 900px;
+    }
+/*Aside Les Plus Populaires*/
+    #populaire{
+        justify-content: flex-start;
+        align-content: space-around;
+        width: 900px;
+        height: 250px;
+    }
+    #tousPopulaire{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 900px;
+    }
+    #titrePop{
+        width: 850px;
+        justify-content: space-between;
+    }
+    .conteneurPopulaire{
+        width: 285px;
+        height: 142px;
+    }
+/*Section Activités à Marseille*/
+    #activite{
+        width: 900px;
+        height: 480px;
+    }
+    #tousActivite{
+        justify-content: space-around;
+        align-content: space-between;
+        flex-wrap: wrap;
+        height: 480px;
+    }
+    .imgActiviteXL{
+        width: 230px;
+        height: 115px;
+    }
+    /*colonne L et XS*/
+    #colonne1{
+        display: flex;
+        justify-content: space-between;
+        width: 535px;
+        height: 165px;
+    }
+    #imgActiviteL{
+        width: 230px;
+        height: 115px;
+    }
+    #imgActiviteXS{
+        width: 230px;
+        height: 115px;
+    }
+    /*colonne S et M*/
+    #colonne2{
+        display: flex;
+        justify-content: space-between;
+        width: 535px;
+        height: 165px;
+    }
+    #imgActiviteS{
+        width: 230px;
+        height: 115px;
+    }
+    #imgActiviteM{
+        width: 230px;
+        height: 115px;
+    }
+/*Footer*/
+    footer{
+        justify-content: space-around;
+        width: 945px;
+    }
+    #aPropos{
+        margin-left: 0px;
+    }
+    #nosHebergement{
+        margin-right: 0px;
+    }
+    #assistance{
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+/*Première barre de navigation*/
+    #navigationRapide{
+        display: block;
+        width: 350px;
+        margin-left: 0px;
+    }
+    #divLogo{
+        display: flex;
+        justify-content: center;
+    }
+    #lien{
+        width: 350px;
+        justify-content: flex-start;
+    }
+    #lienHebergement{
+        border-top: none;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #divLienHebergement{
+        display: flex;
+        justify-content: center;
+        border-bottom:  3px #0065FC solid;
+        width: 175px;
+    }
+    #lienActM{
+        display: flex;
+        justify-content: center;
+        border-bottom: 3px #D9D9D9 solid;
+        width: 175px;
+    }
+/*Texte entre les deux nav*/
+    #premierTitre{
+        margin-left: 0px;
+        width: 350px;
+    }
+    #phrase{
+        margin-left: 0px;
+        width: 350px;
+    }
+/*Deuxième barre de navigation*/
+    #formulair{
+        margin-left: 0px;
+        width: 290px;
+        border-radius: 17px 15px 15px 17px;
+        border-right: none !important;
+        border-left: none !important;
+        border: 1px solid #F2F2F2;
+    }
+    #iconeMaps{
+        width: 50px;
+        height: 40px;
+    }
+    #searchB{
+        width: 200px;
+        height: 40px;
+        border: none;
+    }
+    #searchB::placeholder{
+        color: black;
+        font-size: 1.3em;
+    }
+    .search{
+        width: 40px;
+        height: 40px;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: initial;
+    }
+/*troisième barre de navigation*/
+    #navBoutons{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 0px;
+        width: 300px;
+        height: 220px;
+    }
+    #filtre{
+        display: flex;
+        align-items: center;
+        font-size: 1.1em;
+        font-weight: bold;
+        width: 50px;
+    }
+    #boutonFiltre{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 300px;
+        height: 200px;
+    }
+    #ecoFami{
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+/*barre d'info*/
+    #info{
+        width: 350px;
+        margin-left: 0px;
+        margin-top: 18px;
+    }
+    #infoL{
+        width: 27px;
+    }
+/*Rassemble Section Hébergement et Aside Les Plus populaires*/
+    #principal{
+        margin-left: 0px;
+        width: 350px;
+        justify-content: flex-start;
+    }
+/*Début Aside Les Plus Populaires*/
+    #populaire{
+        margin-top: 30px;
+        width: 350px;
+        height: 590px;
+        border-radius: 0px 0px 0px 0px;
+    }
+    #tousPopulaire{
+        flex-direction: column;
+        width: 300px;
+    }
+    #titrePop{
+        width: 300px;
+    }
+    .conteneurPopulaire{
+        width: 300px;
+    }
+/*Section Hébergement*/
+    #hebergement{
+        background-color: #ffffff;
+        width: 350px;
+        height: 1450px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    #tousHebergement{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 350px;
+        height: 1370px;
+    }
+    .conteneurHebergement{
+        width: 300px;
+    }
+    .imgHebergement{
+        width: 290px;
+        border-radius: 13px 13px 0px 0px;
+    }
+    .infoHebergement{
+        align-items: flex-start;
+        width: 280px;
+    }
+    #afficherPlus{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 30px;
+    }
+/*Section Activités à Marseille*/
+/*Commun à toutes les activités*/
+    #activite{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        width: 350px;
+        height: 1500px;
+    }
+    #titreActivite{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    #tousActivite{
+        height: 1500px;
+    }
+    .nomActivite{
+        margin-left: 0px;
+    }
+    #colonne1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 440px;
+    }
+    #colonne2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        height: 440px;
+    }
+    /*activitéXL*/
+    .imgActiviteXL{
+        width: 300px;
+        height: 140px;
+    }
+    /*colonne L et XS*/
+    #imgActiviteL{
+        width: 300px;
+        height: 140px;
+    }
+    #imgActiviteXS{
+        width: 300px;
+        height: 140px;
+    }
+    /*colonne S et M*/
+    #imgActiviteS{
+        width: 300px;
+        height: 140px;
+    }
+    #imgActiviteM{
+        width: 300px;
+        height: 140px;
+    }
+/*Début Footer*/
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-right: 0px;
+        width: 350px;
+        height: 420px;
+    }
+    #aPropos{
+        margin-left: 10px;
+        margin-top: 0px;
+    }
+    #aProposT{
+        margin-bottom: 0px;
+    }
+    #nosHebergement{
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    #nosHebergementT{
+        margin-bottom: 0px;
+    }
+    #assistance{
+        margin-left: 10px;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+    #assistanceT{
+        margin-bottom: 0px;
+    }
+}
