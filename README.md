@@ -1,4 +1,4 @@
-# Booki
+# P-2 Booki
 Site de réservation d'hébergement
 
 Projet effectué pour OpenClassrooms
